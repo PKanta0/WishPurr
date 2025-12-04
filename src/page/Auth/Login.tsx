@@ -41,9 +41,9 @@ const Login = () => {
             localStorage.setItem("user", JSON.stringify(data.user));
 
             if (data.user.role === "admin") {
-                navigate("/admin");
+                window.location.href = "/admin";
             } else {
-                navigate("/");
+                window.location.href = "/";
             }
         } catch (err: any) {
             setError(err.message || "Login failed");
