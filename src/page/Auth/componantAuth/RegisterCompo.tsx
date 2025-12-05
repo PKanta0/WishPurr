@@ -1,3 +1,5 @@
+import React from "react";
+
 type RegisterCompoProps = {
     label: string;
     placeholder: string;

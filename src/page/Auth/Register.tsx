@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React ,{ useState } from "react";
 import { useNavigate } from "react-router-dom";
 import RegisterCompo from "./componantAuth/RegisterCompo";
 import { API_BASE } from "../../config/api";

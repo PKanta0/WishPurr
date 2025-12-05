@@ -1,3 +1,5 @@
+import React from "react";
+
 type LoginCompoProps = {
     label: string;
     placeholder: string;
