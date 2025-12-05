@@ -32,6 +32,11 @@ app.get("/health", async (req, res) => {
 });
 
 // start server
-app.listen(PORT, () => {
-    console.log(`WishPurr backend running on http://localhost:${PORT}`);
-});
+if (process.env.NODE_ENV !== "test") {
+    app.listen(PORT, () => {
+        console.log(`WishPurr backend running on http://localhost:${PORT}`);
+    });
+}
+
+//supertest unit test
+module.exports = app;
