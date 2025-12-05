@@ -1,8 +1,9 @@
-CREATE DATABASE IF NOT EXISTS wishpurr
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_unicode_ci;
+-- CREATE DATABASE IF NOT EXISTS wishpurr
+--   CHARACTER SET utf8mb4
+--   COLLATE utf8mb4_unicode_ci;
 
-USE wishpurr;
+-- USE wishpurr;
+USE railway;
 
 CREATE TABLE users (
   user_id     INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -132,17 +133,13 @@ where user_name = "admin";
 UPDATE users SET role = 'admin' WHERE user_id = 1;
 
 
+
 INSERT INTO categories (name, description)
 VALUES
 ('ลูกแมว', 'อาหารสำหรับลูกแมว'),
 ('แมวโต', 'อาหารสำหรับแมวโต');
 
-INSERT INTO users (user_name, email, password, role)
-VALUES
-('aaa', 'aaa@gmail.com', 'temp1234', 'user'),
-('bbb', 'bbb@gmail.com', 'temp1234', 'user'),
-('ccc', 'ccc@gmail.com', 'temp1234', 'user'),
-('admin', 'admin@wishpurr.com', 'adminpass', 'admin');
+
 
 INSERT INTO products (category_id, name, description, price, stock, image_cover, weight)
 VALUES
@@ -169,22 +166,6 @@ VALUES
 (3, '/img/product.png'),
 (4, '/img/product.png');
 
-INSERT INTO orders (user_id, total)
-VALUES
-(1, 299),
-(2, 319),
-(3, 289);
 
-INSERT INTO order_items (order_id, product_id, qty, unit_price)
-VALUES
-(1, 1, 1, 299),
-(2, 2, 1, 319),
-(3, 4, 1, 289);
-
-INSERT INTO reviews (user_id, product_id, rating, comment)
-VALUES
-(1, 1, 5, 'น้องแมวชอบมากเลยค่ะ'),
-(2, 2, 4, 'กินง่าย กลิ่นไม่แรง ดีค่ะ'),
-(3, 4, 5, 'ลูกแมวชอบมาก โตไวขึ้นจริงครับ');
 
 
